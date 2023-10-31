@@ -6,6 +6,7 @@ audiogo = new Audio('gameover.mp3');
 setTimeout(() => {
     audio.play()
 }, 1000);
+
 document.onkeydown = function (e) {
     console.log("Key code is: ", e.keyCode)
     if (e.keyCode == 38) {
@@ -40,7 +41,7 @@ setInterval(() => {
 
     offsetX = Math.abs(dx - ox);
     offsetY = Math.abs(dy - oy);
-    // console.log(offsetX, offsetY)
+
     if (offsetX < 73 && offsetY < 52) {
         gameOver.innerHTML = "Game Over - Reload to Play Again"
         obstacle.classList.remove('obstacleSnake')
